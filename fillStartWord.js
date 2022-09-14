@@ -2,18 +2,11 @@ const { template } = require('@babel/core')
 
 function fillStartWord(startWord, word) {
   //code here
- 
-  if(startWord === null || startWord === undefined || word === null || word === undefined)
-  {return undefined} 
-  
-  else 
-  {
-    if(word.includes(startWord))
-    {return word}
-
-    else
-    {return String.prototype.concat(startWord + word)}
-  }
+ if(word === null || word === undefined || startWord === null || startWord === null  ){return undefined}
+ else{
+ if(word.includes(startWord)){return word}
+ else{return startWord + word}
+ }
 }
 
 module.exports = fillStartWord
@@ -23,3 +16,4 @@ module.exports = fillStartWord
 // startWord ก่อนหน้าข้อความนั้น โดยถ้า word นั้นมี startword นั้นอยู่แล้ว 
 // ไม่ต้องเติม startword อีก โดยถ้า word มีค่า null หรือ undefined ให้ 
 // return เป็น undefined
+
